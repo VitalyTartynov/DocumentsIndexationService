@@ -2,20 +2,20 @@
 using System.ServiceProcess;
 using System.Timers;
 
-namespace DocumentsIndexationService
+namespace WindowsServiceTemplate
 {
-    partial class IndexationService : ServiceBase
+    partial class TemplateService : ServiceBase
     {
         private const int Interval = 10000;
 
-        private const string Name = "IndexationService";
+        private const string Name = "TemplateService";
         private const string SourceName = Name + "Source";
         private const string LogName = Name + "Log";
 
         private EventLog _eventLog;
         private Timer _timer;
 
-        public IndexationService()
+        public TemplateService()
         {
             InitializeComponent();
 
@@ -28,13 +28,13 @@ namespace DocumentsIndexationService
         private void InitializeTimer()
         {
             _timer = new Timer(Interval);
-            _timer.Elapsed += DoIndexation;
+            _timer.Elapsed += DoWork;
         }
 
-        private void DoIndexation(object sender, ElapsedEventArgs elapsedEventArgs)
+        private void DoWork(object sender, ElapsedEventArgs elapsedEventArgs)
         {
             // write your code here
-            _eventLog.WriteEntry("We can do indexation!", EventLogEntryType.Warning);
+            _eventLog.WriteEntry("We can do something there!", EventLogEntryType.Warning);
         }
 
         private void PrepareEventLog()

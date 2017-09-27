@@ -1,6 +1,6 @@
-﻿namespace DocumentsIndexationService
+﻿namespace WindowsServiceTemplate
 {
-    partial class IndexationService
+    partial class TemplateService
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            this.ServiceName = "IndexationService";
+            this.ServiceName = "TemplateService";
         }
 
         #endregion
