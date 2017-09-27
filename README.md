@@ -1,2 +1,2 @@
-# SimpleWindowsService
-Sample for windows service
+# WindowsServiceTemplate
+Template for creating any windows service
